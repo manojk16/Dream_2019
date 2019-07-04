@@ -20,9 +20,9 @@ public:
 		data=value;
 		next=NULL;
 	}
-	/*~Node(){
+	~Node(){
 		std::cout<<"Deleted Everything\n";
-	}*/
+	}
 };
 Node* createNewnode(int value){
 	Node* new_node=new Node();
@@ -83,7 +83,7 @@ int findNode(Node* head_ref, int pos){
  * */
 
 Node* deleteNodewithPtr(Node* ptr){
-	Node* temp;;
+	Node* temp;
 	while(ptr->next!=NULL){
 		ptr->data=ptr->next->data;
 		temp=ptr;
@@ -104,6 +104,7 @@ Node* deleteNodewithPtr(Node* ptr){
  * 	3. else Middle node is at length (l+1)/2;
  *
  * */
+/*********************************************/
 void findMidNode(Node* head_ref)
 {
 	Node* temp = head_ref;
@@ -116,14 +117,14 @@ void findMidNode(Node* head_ref)
 		temp = temp->next;
 	}
 	if(len<=2){
-		std::cout<<"Lenth is not sufficient Mid is not possbile"<<"\n";
+		std::cout<<"Length is not sufficient Mid is not possbile"<<"\n";
 		assert(0);
 	}
 	count=len/2;
 	count1=(len+1)/2;
 	if (len % 2 == 0)
 	{
-		std::cout << "As lenth is even then Middle Nodes are as " << "\n";
+		std::cout << "As length is even then Middle Nodes are as " << "\n";
 		while (count-1)
 		{
 			count--;
@@ -147,24 +148,116 @@ void findMidNode(Node* head_ref)
 		std::cout << "Mid Node is ::" << current->data << "\n";
 	}
 }
+/*******************************************************************/
+/*Program for n’th node from the end of a Linked List
+ * Algorithm :
+ * 	1. Count the number of Nodes in to the list lets say m
+ * 	2. traverse from head to the (m-n+1)th Node.
+ * 	3. Return data
+ * */
+// head_ref= ref to the head
+// n nodes number to be find out from the end;
+int FindNodefromend(Node *head_ref, int n){
+	Node* temp=head_ref;
+	Node* current=head_ref;
+	int count=0;
+	int pos=0;
+	if(temp==NULL){
+		std::cout<<"Linked List is Empty so terminalte the prog\n";
+		assert(0);
+	}else{
+		while(temp!=NULL){
+			count++;
+			temp=temp->next;
+		}
+		pos=count-n;
+	}
+	while(pos-- && current->next){
+		current=current->next;
+	}
+	return current->data;
 
+}
+/**********************Write a function to delete a Linked List*****************/
+void deleteList(Node** head_ref){
+	Node* temp=*head_ref;
+	Node* current;
+	if(temp==NULL){
+		std::cout<<"Linked List is Empty terminate the program\n";
+		assert(0);
+	}else{
+		while(temp!=NULL){
+			current=temp;
+			temp=temp->next;
+			delete current;
+		}
+		(*head_ref)=NULL;
+		std::cout<<"Linked List Deleted "<<"\n";
+	}
+}
+/************************function that counts the number of times a given int occurs in a Linked List*************/
+/*
+ * Given a singly linked list and a key, count number of occurrences of given key in linked list
+ *
+ * */
+int countOccurance(Node* head_ref,int key){
+	Node* temp=head_ref;
+	int count=0;
+	while(temp!=NULL){
+		if(key==temp->data){
+			count++;
+		}
+		temp=temp->next;
+	}
+	return count;
+}
 
-
+/*******************************************************************/
 int main(){
 Node* head_ref=new Node(100);
+/**** 1. Insertion**********************/
+
 insertatbeg(&head_ref,50);
-insertatbeg(&head_ref,40);
-insertatbeg(&head_ref,30);
-insertatbeg(&head_ref,20);
-insertatbeg(&head_ref,10);
-insertatbeg(&head_ref,5);
-std::cout<<"Node at pos 4 is "<< findNode(head_ref,4)<<"\n";
+insertatbeg(&head_ref,50);
+insertatbeg(&head_ref,50);
+insertatbeg(&head_ref,50);
+insertatbeg(&head_ref,50);
+insertatbeg(&head_ref,50);
+
+/***************** 2. find nth Node********************************/
+
+/*std::cout<<"Node at pos 4 is "<< findNode(head_ref,4)<<"\n";
 displayList(head_ref);
 std::cout<<"Node at pos 3 is "<< findNode(head_ref,3)<<"\n";
-std::cout<<"Node at pos 0 is "<< findNode(head_ref,0)<<"\n";
-deleteNodewithPtr(head_ref);
+std::cout<<"Node at pos 0 is "<< findNode(head_ref,0)<<"\n";*/
+
+/**************3. delete only node at which pointer is given*************/
+
+//deleteNodewithPtr(head_ref);
+
+/*************4. display****************/
+
 displayList(head_ref);
-findMidNode(head_ref);
+
+/************************5. find the middle Node *************************/
+
+//findMidNode(head_ref);
+
+/**********************6. find nth Nodes from the End******************/
+
+int nodeData=FindNodefromend(head_ref,7);
+
+std::cout<<"7th Node from the End is: "<<nodeData<<"\n";
+/*********************7. Delete The list*****/
+//deleteList(&head_ref);
+
+
+displayList(head_ref);
+
+
+/**********************8. counts the number of times a given int occurs in a Linked List ****************************/
+std::cout<<"key=50 occurs " << countOccurance(head_ref,50)<<" times"<<"\n";
+/*********************/
 delete head_ref;
 
 }

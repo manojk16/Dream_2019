@@ -12,7 +12,7 @@ class Node {
 public:
 	int data;
 	Node* next;
-	Node()
+	/*Node()
 	{
 		//std::cout<<"Constructor get called\n";
 
@@ -25,7 +25,7 @@ public:
 	~Node()
 	{
 		std::cout << "Deleted Everything\n";
-	}
+	}*/
 };
 
 Node* createNewnode(int value)
@@ -40,8 +40,8 @@ Node* createNewnode(int value)
 void insertatbeg(Node** head_ref, int value)
 {
 	Node* temp = (*head_ref);
-	//Node* new_node=createNewnode(value);
-	Node* new_node = new Node(value);
+	Node* new_node=createNewnode(value);
+	//Node* new_node = new Node(value);
 	if (temp == NULL)
 	{
 		std::cout << "Link List Is empty enter the very first Node\n";
@@ -73,16 +73,24 @@ void displayList(Node* head_ref)
 	std::cout << "\n";
 }
 Node* insert(){
-		Node* head_ref = new Node(100); // First Node
+		//Node* head_ref = new Node(10); // First Node
+		Node* head_ref=NULL;
 		/**** 1. Insertion**********************/
+	insertatbeg(&head_ref, 7);
+	insertatbeg(&head_ref, 7);
+	insertatbeg(&head_ref, 5);
+	insertatbeg(&head_ref, 7);
+	insertatbeg(&head_ref, 5);
 
-		insertatbeg(&head_ref, 50);
-		insertatbeg(&head_ref, 50);
-		insertatbeg(&head_ref, 40);
-		insertatbeg(&head_ref, 20);
-		insertatbeg(&head_ref, 10);
-		insertatbeg(&head_ref, 10);
-		return head_ref;
+	insertatbeg(&head_ref, 12);
+	insertatbeg(&head_ref, 11);
+	insertatbeg(&head_ref, 11);
+	insertatbeg(&head_ref, 12);
+	insertatbeg(&head_ref, 10);
+	insertatbeg(&head_ref, 10);
+	insertatbeg(&head_ref, 10);
+
+	return head_ref;
 
 }
 #endif /* LINK_LIST_H_ */

@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/redbend/dev/Manoj/DS_With_Cpp/Linked_list_2/linkedlistIterator.cpp
+linkedlistIterator.h
+/home/redbend/dev/Manoj/DS_With_Cpp/Linked_list_2/linkedlistIterator.h
+cassert
+-
+
+/home/redbend/dev/Manoj/DS_With_Cpp/Linked_list_2/linkedlistIterator.h
+iostream
+-
+iterator
+-
+algorithm
+-
+
+/home/redbend/dev/Manoj/DS_With_Cpp/Linked_list_2/main.cpp
+iostream
+-
+linkedlistIterator.h
+/home/redbend/dev/Manoj/DS_With_Cpp/Linked_list_2/linkedlistIterator.h
+linkedlistIterator.cpp
+/home/redbend/dev/Manoj/DS_With_Cpp/Linked_list_2/linkedlistIterator.cpp
+

@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/redbend/dev/Manoj/DS_With_Cpp/Ch_03_Deque/1_DequeProgram.cpp
+algorithm
+-
+deque
+-
+iostream
+-
+iterator
+-
+iostream
+-
+

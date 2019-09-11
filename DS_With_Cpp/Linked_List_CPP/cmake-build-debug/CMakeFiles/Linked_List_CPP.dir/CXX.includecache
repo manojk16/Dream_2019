@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/redbend/dev/Manoj/DS_With_Cpp/Linked_List_CPP/2_LinkedListType.cpp
+2_LinkedListType.h
+/home/redbend/dev/Manoj/DS_With_Cpp/Linked_List_CPP/2_LinkedListType.h
+
+/home/redbend/dev/Manoj/DS_With_Cpp/Linked_List_CPP/2_LinkedListType.h
+iostream
+-
+iterator
+-
+algorithm
+-
+

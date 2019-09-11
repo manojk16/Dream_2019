@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Video_Store.dir/main.cpp.o  -o Video_Store 

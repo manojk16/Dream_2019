@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/redbend/dev/Manoj/DS_With_Cpp/Stack_by_Array/main.cpp
+iostream
+-
+mystack.h
+/home/redbend/dev/Manoj/DS_With_Cpp/Stack_by_Array/mystack.h
+
+/home/redbend/dev/Manoj/DS_With_Cpp/Stack_by_Array/mystack.h
+iostream
+-
+cassert
+-
+stackADT.h
+/home/redbend/dev/Manoj/DS_With_Cpp/Stack_by_Array/stackADT.h
+stackType.h
+/home/redbend/dev/Manoj/DS_With_Cpp/Stack_by_Array/stackType.h
+
+/home/redbend/dev/Manoj/DS_With_Cpp/Stack_by_Array/stackADT.h
+
+/home/redbend/dev/Manoj/DS_With_Cpp/Stack_by_Array/stackType.h
+iostream
+-
+stackADT.h
+/home/redbend/dev/Manoj/DS_With_Cpp/Stack_by_Array/stackADT.h
+cassert
+-
+

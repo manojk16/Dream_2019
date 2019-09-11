@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Stack_by_LinkedList.dir/main.cpp.o  -o Stack_by_LinkedList 
